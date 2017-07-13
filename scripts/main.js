@@ -17,16 +17,22 @@ function handValue(cards) {
   // Loop over cards
 
     for (let i = 0; i < cards.length; i++) {
-    if (cards[i] === "K" || cards[i] === "Q" || cards[i] === "J") {
-      cards[i] = "10";
-    }else if (cards[i] === "A") {
-      cards[i] = "11";
-    }
+      if (cards[i] === "K" || cards[i] === "Q" || cards[i] === "J") {
+        cards[i] = "10";
+      }else if (cards[i] === "A") {
+        if (totalValue > "10") {
+          cards[i] = "1";
+        }else {
+          cards[i] = "11";
+        }
+      }
     totalValue = parseInt(cards[i]) + totalValue;
+      if (totalValue > 21) {
+          (totalValue -= 10);
+      }
 
   }
-
-    return totalValue;
+  return totalValue;
 }
 
 
