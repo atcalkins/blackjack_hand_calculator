@@ -10,19 +10,23 @@
 */
 
 
-//cards #=> ['2']
 function handValue(cards) {
   let totalValue = 0;
-    totalValue = parseInt(cards[0]) + totalValue;
-
-
+    // totalValue = parseInt(cards[0]) + totalValue;
 
   // Loop over cards
-      // TODO: Convert string values into numbers
-      // TODO: Add numerical value to totalvalue
 
+    for (let i = 0; i < cards.length; i++) {
+    if (cards[i] === "K" || cards[i] === "Q" || cards[i] === "J") {
+      cards[i] = "10";
+    }else if (cards[i] === "A") {
+      cards[i] = "11";
+    }
+    totalValue = parseInt(cards[i]) + totalValue;
 
-  return totalValue;
+  }
+
+    return totalValue;
 }
 
 
