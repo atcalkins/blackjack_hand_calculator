@@ -4,16 +4,25 @@
    Open up the `index.html` file and your console
    to watch the assertions pass as you write your code.
 
-   Also remember, that the parameter `hand` will be an array, so
-   you'll need to parse through that first before you can start to 
+   Also remember, that the parameter `cards` will be an array, so
+   you'll need to parse through that first before you can start to
    write your logic.
 */
 
 
-function handValue (hand) {
+//cards #=> ['2']
+function handValue(cards) {
+  let totalValue = 0;
+    totalValue = parseInt(cards[0]) + totalValue;
 
 
-  return;
+
+  // Loop over cards
+      // TODO: Convert string values into numbers
+      // TODO: Add numerical value to totalvalue
+
+
+  return totalValue;
 }
 
 
